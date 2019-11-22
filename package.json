@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint:check": "ng lint --format=stylish",
+    "lint:fix": "ng lint --format=stylish --fix",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -29,8 +30,12 @@
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "@types/node": "~8.9.4",
+    "codelyzer": "^5.0.0",
+    "prettier": "^1.19.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "~3.5.3"
   }
 }
