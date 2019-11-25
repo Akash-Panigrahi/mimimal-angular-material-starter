@@ -56,6 +56,14 @@
                                     "maximumError": "10kb"
                                 }
                             ]
+                        },
+                        "hmr": {
+                            "fileReplacements": [
+                                {
+                                "replace": "src/environments/environment.ts",
+                                "with": "src/environments/environment.hmr.ts"
+                                }
+                            ]
                         }
                     }
                 },
@@ -67,6 +75,10 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "helo-otp:build:production"
+                        },
+                        "hmr": {
+                            "hmr": true,
+                            "browserTarget": "helo-otp:build:hmr"
                         }
                     }
                 },
