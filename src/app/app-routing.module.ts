@@ -13,14 +13,14 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: () =>
-            import('./auth/auth.module').then(m => m.AuthModule),
+            import('./views/auth/auth.module').then(m => m.AuthModule),
         canActivate: [NotLoggedInUserGuard]
         // canLoad: [NotLoggedInUserGuard]
     },
     {
         path: '',
         loadChildren: () =>
-            import('./home/home.module').then(m => m.HomeModule),
+            import('./views/home/home.module').then(m => m.HomeModule),
         canActivate: [LoggedInUserGuard]
         // canLoad: [LoggedInUserGuard]
     },
