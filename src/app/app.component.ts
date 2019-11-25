@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
     template: `
         <router-outlet></router-outlet>
     `,
-    styles: []
+    styles: [
+        `
+            :host {
+                display: flex;
+                height: inherit;
+                width: inherit;
+            }
+        `
+    ]
 })
 export class AppComponent {}

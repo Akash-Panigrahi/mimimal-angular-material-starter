@@ -2,9 +2,11 @@
 @import 'mixins';
 
 :host {
-    height: inherit;
     display: flex;
+    height: inherit;
+    width: inherit;
 }
+
 
 .page-not-found {
     flex: 1;
