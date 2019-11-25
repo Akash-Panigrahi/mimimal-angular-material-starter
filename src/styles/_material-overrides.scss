@@ -1,0 +1,88 @@
+@import '~@angular/material/theming';
+
+.light-theme {
+    // mat menu theme resets
+    .mat-menu {
+        &-panel {
+            min-height: auto;
+        }
+
+        &-content:not(:empty) {
+            padding: 0;
+        }
+    }
+
+    // mat stepper resets
+    .mat-step-label {
+        min-width: auto;
+    }
+
+    // mat-icon colors for mat-form-field
+    .mat-form-field {
+        &:hover:not(.mat-form-field-disabled),
+        &:focus:not(.mat-form-field-disabled) {
+            .mat-form-field-flex {
+                .mat-icon {
+                    color: $dark-secondary-text;
+                }
+
+                &:hover,
+                &:focus {
+                    .mat-icon {
+                        color: $dark-primary-text;
+                    }
+                }
+            }
+        }
+
+        &-disabled {
+            .mat-form-field-flex, input {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .mat-icon[disabled] {
+        color: $dark-disabled-text;
+    }
+
+    .mat-primary,
+    .mat-accent {
+        .mat-icon {
+            color: inherit;
+        }
+    }
+
+    .mat-form-field-disabled {
+        .mat-form-field-prefix,
+        .mat-form-field-suffix,
+        .mat-form-field-label,
+        .mat-hint,
+        .mat-icon {
+            color: $dark-disabled-text;
+        }
+    }
+
+    /* mat table resets */
+    .mat-table {
+        margin: 0;
+        width: 100%;
+    }
+
+    .mat-header-cell,
+    .mat-footer-cell,
+    .mat-cell {
+        padding: 1rem;
+        white-space: pre;
+    }
+
+    /* mat stepper resets */
+    .mat-horizontal-stepper-header-container {
+        margin-bottom: 2rem;
+    }
+
+    /* mat dialog resets */
+    .mat-dialog-container {
+        height: auto;
+    }
+}

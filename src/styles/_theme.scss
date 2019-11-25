@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+
+@import 'palette';
+@import 'components-theme';
+@import 'theme-mixins/theme-mixins';
+
+$typography: mat-typography-config(
+  $font-family: 'Poppins'
+);
+
+@include mat-core($typography);
+
+$primary : mat-palette($custom-primary);
+$accent  : mat-palette($custom-accent);
+$warn    : mat-palette($mat-red, A200);
+
+// mat colors palettes
+$success : mat-palette($mat-green, 800);
+$error   : mat-palette($mat-red, 800);
+$warning : mat-palette($mat-amber, 800);
+$info    : mat-palette($mat-blue, 800);
+
+
+$light-theme: mat-light-theme(
+    $primary,
+    $accent,
+    $warn
+);
+
+// Include the default theme styles.
+.light-theme {
+    @include angular-material-theme($light-theme);
+    @include components-theme($light-theme);
+    @include theme-mixin($light-theme);
+}

@@ -1,0 +1,28 @@
+@mixin scrollbar-theme($theme) {
+    $primary: mat-color($theme, primary);
+
+    ::-webkit-scrollbar {
+        /* width */
+        width: 5px;
+        height: 5px;
+
+        /* Track */
+        &-track {
+            background: $light-disabled-text;
+        }
+
+        /* Handle */
+        &-thumb {
+            border-radius: 50px;
+            background: $dark-disabled-text;
+
+            &:hover {
+                background: $dark-secondary-text;
+            }
+
+            &:active {
+                background: mat-color($primary, 400);
+            }
+        }
+    }
+}

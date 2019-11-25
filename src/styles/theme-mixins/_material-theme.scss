@@ -1,0 +1,31 @@
+@mixin material-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+
+    // Table
+    .mat-table {
+        th.mat-header-cell,
+        td.mat-footer-cell,
+        td.mat-cell {
+            font-size: 1rem;
+            border: 1px solid mat-color($accent, 50) !important;
+        }
+
+        th.mat-header-cell {
+            background-color: mat-color($accent, 50);
+            color: mat-color($primary, 200);
+            font-weight: 600;
+        }
+    }
+
+    // Form Field
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        background-color: mat-color($accent, 50);
+    }
+
+    // Button
+    .mat-raised-button {
+        background-color: #3b86ff !important;
+        color: $light-primary-text;
+    }
+}

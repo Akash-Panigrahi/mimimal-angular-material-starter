@@ -1,0 +1,9 @@
+// component themes
+
+// @import 'app/core/components/toast/toast.component.scss-theme';
+// @import 'app/core/components/internal-server-error/internal-server-error.component.scss-theme';
+
+@mixin components-theme($theme) {
+    // @include toast-theme($theme);
+    // @include internal-server-error-theme($theme);
+}

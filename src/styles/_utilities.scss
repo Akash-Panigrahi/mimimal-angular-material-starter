@@ -1,0 +1,155 @@
+@import 'mixins/mixins';
+
+// spacing utitlies
+.horizontal-space {
+    display: inline-flex;
+    padding-right: 0.5rem;
+
+    &2 {
+        padding-right: 1rem;
+    }
+}
+
+.vertical-space {
+    display: inline-flex;
+    padding-bottom: 0.5rem;
+
+    &2 {
+        padding-bottom: 1rem;
+    }
+
+    &3 {
+        padding-bottom: 1.5rem;
+    }
+
+    &4 {
+        padding-bottom: 2rem;
+    }
+}
+
+.remaining-space {
+    flex: 1;
+}
+
+// ---
+
+// angular material utilities
+.no-mat-form-field-bottom {
+    .mat-form-field {
+        &-underline {
+            bottom: 0;
+        }
+
+        &-wrapper {
+            padding-bottom: 0;
+        }
+    }
+
+    .mat-select-arrow-wrapper {
+        transform: translateY(0);
+    }
+}
+
+.no-mat-form-field-top {
+    .mat-form-field {
+        &-infix {
+            border-top: 0;
+        }
+    }
+}
+
+.no-outline-mat-label {
+    $field: '.mat-form-field';
+
+    &#{$field}-appearance-outline {
+        #{$field}-infix {
+            border-top: 0;
+        }
+
+        #{$field}-wrapper {
+            margin: .25rem 0 .5rem;
+        }
+
+        #{$field}-flex {
+            margin-top: 0;
+        }
+
+        #{$field}-outline {
+            top: 0;
+            height: 100%;
+        }
+
+        #{$field}-subscript-wrapper {
+            margin-top: 0.3rem;
+        }
+
+        .mat-select-arrow-wrapper {
+            transform: translateY(0);
+        }
+    }
+}
+
+// ---
+
+// color classes using mat colors
+.color {
+    $colors: (
+        success : $success,
+        error   : $error,
+        warning : $warning,
+        info    : $info
+    );
+
+    @each $name, $color in $colors {
+        &__#{$name} {
+            color: mat-color($color) !important;
+        }
+    }
+}
+
+// ---
+
+// form field utilities
+.field__section {
+    @include flex($wrap: wrap);
+}
+
+.field {
+    &__label {
+        width: 200px;
+        margin: 14px 1rem 0 0;
+    }
+
+    &__wrapper {
+        width: 350px;
+    }
+}
+
+.form__actions {
+    @include actions;
+
+    @include flex(center);
+    margin-top: 1.5rem;
+}
+
+.light-theme .mat-table {
+    &.cells-centered {
+        .mat-header-cell,
+        .mat-cell {
+            text-align: center;
+        }
+    }
+
+    &.cells-font-small {
+        .mat-header-cell,
+        .mat-cell {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.page-heading {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+}

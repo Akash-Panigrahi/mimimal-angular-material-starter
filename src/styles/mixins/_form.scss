@@ -1,0 +1,90 @@
+@mixin form-wrapper {
+    max-width: 350px;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+@mixin title {
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+@mixin header {
+    @include flex($align-items: center, $direction: column);
+    margin-bottom: 2rem
+}
+
+@mixin form-fields {
+    @include columnar;
+
+    >* {
+        min-width: 300px;
+    }
+}
+
+@mixin actions {
+    margin-top: 2rem;
+    @include flex(space-evenly);
+}
+
+@mixin button {
+    min-width: 9rem;
+    @include flex(center);
+    transition: all 0.15s ease-in-out;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+@mixin options {
+    margin-top: .5rem;
+    @include flex(space-between, center);
+}
+
+/* Theme */
+@mixin form-background-theme {
+    background: transparent;
+
+    @include mq(lt-md) {
+        background: rgba(255, 255, 255, .95);
+    }
+}
+
+@mixin title-theme($config) {
+    font-size: mat-font-size($config, headline);
+}
+
+@mixin subtitle-theme($config) {
+    font-size: mat-font-size($config, body-2);
+    color: $dark-secondary-text;
+}
+
+@mixin button-theme {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        @include mat-elevation(2);
+    }
+}
+
+@mixin colored-button-theme($primary) {
+    @include button-theme;
+    background-color: mat-color($primary);
+    color: mat-contrast($primary, 500);
+}
+
+@mixin inverted-button-theme($primary) {
+    @include button-theme;
+    color: mat-color($primary);
+    border-color: mat-color($primary);
+}
