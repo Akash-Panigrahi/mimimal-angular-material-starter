@@ -1,0 +1,15 @@
+<mat-icon>{{ getIcon(status) }}</mat-icon>
+
+<span class="horizontal-space"></span>
+
+<span class="message">{{ message }}</span>
+
+<ng-container *ngIf="canClose">
+    <span class="remaining-space"></span>
+    <span class="horizontal-space2"></span>
+
+    <button mat-icon-button
+        (click)="closeToast()">
+        <mat-icon>close</mat-icon>
+    </button>
+</ng-container>

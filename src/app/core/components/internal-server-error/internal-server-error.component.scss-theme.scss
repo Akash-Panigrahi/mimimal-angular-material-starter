@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+
+@mixin internal-server-error-theme($theme) {
+    $config: $typography;
+
+    .internal-server-error {
+        h1 {
+            font-size: mat-font-size($config, display-3);
+        }
+        h3 {
+            font-size: mat-font-size($config, display-1);
+        }
+        h5 {
+            font-size: mat-font-size($config, title);
+        }
+        h6 {
+            font-size: mat-font-size($config, subheading-1);
+        }
+    }
+}

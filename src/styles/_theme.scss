@@ -2,7 +2,7 @@
 
 @import 'palette';
 @import 'components-theme';
-@import 'theme-mixins/theme-mixins';
+@import 'theme-mixins';
 
 $typography: mat-typography-config(
   $font-family: 'Poppins'
@@ -31,5 +31,5 @@ $light-theme: mat-light-theme(
 .light-theme {
     @include angular-material-theme($light-theme);
     @include components-theme($light-theme);
-    @include theme-mixin($light-theme);
+    @include theme-mixins($light-theme);
 }
