@@ -1,5 +1,5 @@
-@import 'theme-mixins/scrollbar-theme';
-@import 'theme-mixins/material-theme';
+@import 'scrollbar-theme';
+@import 'material-theme';
 
 @mixin theme-mixin($theme) {
     @include scrollbar-theme($light-theme);
