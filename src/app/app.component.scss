@@ -1,0 +1,18 @@
+:host {
+    height: inherit;
+}
+
+main {
+    height: inherit;
+}
+
+.loader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+    .mat-progress-bar {
+        // height: 2px;
+    }
+}

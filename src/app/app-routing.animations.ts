@@ -20,24 +20,15 @@ export const appRoutingAnimation = trigger('appRoutingAnimation', [
                 height: '100%'
             })
         ),
-
-        queryOn(
-            ':enter',
-            style({
-                transform: 'translateX(100%)'
-            })
-        ),
-
         sequence([
             queryOn(':leave', animateChild()),
             group([
                 queryOn(':leave', [
-                    style({ transform: 'translateX(0%)' }),
-                    animate('500ms', style({ transform: 'translateX(-100%)' }))
+                    animate(500, style({ transform: 'translateX(-100%)' }))
                 ]),
                 queryOn(':enter', [
                     style({ transform: 'translateX(100%)' }),
-                    animate('500ms', style({ transform: 'translateX(0%)' }))
+                    animate(500, style({ transform: 'translateX(0%)' }))
                 ])
             ]),
             queryOn(':enter', animateChild())
