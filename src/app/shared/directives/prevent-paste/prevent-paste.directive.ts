@@ -1,7 +1,7 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[swpPreventPaste]'
+    selector: '[hotpPreventPaste]'
 })
 export class PreventPasteDirective {
     @HostListener('paste', ['$event'])

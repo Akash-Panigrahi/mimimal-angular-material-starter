@@ -5,7 +5,7 @@
     "start": "ng serve",
     "build": "ng build",
     "hmr": "ng serve --configuration hmr",
-    "lint:check": "ng lint --format=stylish",
+    "lint:check": "ng lint --type-check=true --format=stylish",
     "lint:fix": "ng lint --format=stylish --fix"
   },
   "private": true,

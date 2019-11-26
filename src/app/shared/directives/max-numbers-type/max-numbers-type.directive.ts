@@ -1,7 +1,7 @@
 import { Directive, Input, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[swpMaxNumbersType]'
+    selector: '[hotpMaxNumbersType]'
 })
 export class MaxNumbersTypeDirective {
     @Input() max: number;

@@ -1,7 +1,7 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-    selector: '[swpOnlyNumbers]'
+    selector: '[hotpOnlyNumbers]'
 })
 export class OnlyNumbersDirective {
     @HostListener('keydown', ['$event'])

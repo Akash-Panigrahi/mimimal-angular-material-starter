@@ -2,7 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatSnackBarRef } from '@angular/material/snack-bar';
 
 @Component({
-    selector: 'swp-toast',
+    selector: 'hotp-toast',
     templateUrl: './toast.component.html',
     styleUrls: ['./toast.component.scss']
 })

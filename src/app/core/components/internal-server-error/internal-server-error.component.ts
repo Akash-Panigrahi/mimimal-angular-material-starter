@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
-    selector: 'swp-internal-server-error',
+    selector: 'hotp-internal-server-error',
     templateUrl: './internal-server-error.component.html',
     styleUrls: ['./internal-server-error.component.scss']
 })

@@ -18,14 +18,12 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         request: HttpRequest<any>,
         next: HttpHandler
     ): Observable<HttpEvent<any>> {
-        return next
-            .handle(request)
-            .pipe(
-                tap(
-                    () => {},
-                    (err: HttpErrorResponse) =>
-                        this._httpErrorHandlerService.handleError(err)
-                )
-            );
+        return next.handle(request).pipe(
+            tap(
+                () => {},
+                (err: HttpErrorResponse) =>
+                    this._httpErrorHandlerService.handleError(err)
+            )
+        );
     }
 }
