@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
     trigger,
     transition,
@@ -10,8 +10,20 @@ import { queryOn } from 'src/app/core/utils';
 
 @Component({
     selector: 'hotp-auth',
-    templateUrl: './auth.component.html',
-    styleUrls: ['./auth.component.scss'],
+    template: `
+        <main [@authRoutingAnimation]="o.isActivated ? o.activatedRoute : ''">
+            <router-outlet #o="outlet"></router-outlet>
+        </main>
+    `,
+    styles: [
+        `
+            :host {
+                display: flex;
+                height: inherit;
+                width: inherit;
+            }
+        `
+    ],
     animations: [
         trigger('authRoutingAnimation', [
             transition('* => *', [
@@ -32,8 +44,4 @@ import { queryOn } from 'src/app/core/utils';
         ])
     ]
 })
-export class AuthComponent implements OnInit {
-    constructor() {}
-
-    ngOnInit() {}
-}
+export class AuthComponent {}
